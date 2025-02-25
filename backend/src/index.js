@@ -1,4 +1,4 @@
-import "dotenv/config"; // Load environment variables
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
@@ -10,7 +10,6 @@ import path from "path";
 const app = express();
 connectDB();
 
-// Ensure "uploads" folder exists
 const uploadDir = path.join(process.cwd(), "backend/uploads/");
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
