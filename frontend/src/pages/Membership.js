@@ -4,7 +4,6 @@ import MembershipContext from "../context/MembershipContext";
 const Membership = () => {
   const membershipContext = useContext(MembershipContext);
 
-  // ✅ Move useState to the top level, before any conditions
   const [formData, setFormData] = useState({
     companyName: "",
     plotNo: "",
